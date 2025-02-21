@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "testmod",
+	"version": "${version}",
+	"name": "Test Mod",
+	"description": "This is my first Test mod for Fabric.",
+	"authors": [
+		"BadMapper"
+	],
+	"contact": {
+		"homepage": "https://github.com/BadMapper/VanillaUltra",
+		"sources": "https://github.com/BadMapper/TestMod-Fabric"
+	},
+	"license": "MIT",
+	"icon": "assets/testmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.badmapper.testmod.TestMod"
+		],
+		"fabric-datagen": [
+			"net.badmapper.testmod.TestModDataGenerator"
+		],
+		"client": [
+			"net.badmapper.testmod.TestModClient"
+		]
+	},
+	"mixins": [
+		"testmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
